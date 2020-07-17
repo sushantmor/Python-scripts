@@ -1,0 +1,33 @@
+#no need to import any module as program
+#will run with the help of pre-build modules
+
+#define any variable(say = r) and get value from user (use input command)
+#input must be integer (use int command)
+r=int(input("Enter radius of circle : "))
+
+#formula for calculating area of circle is pi*radius*radius
+area=3.14*r*r
+
+print("Area of circle is",area,"sq. unit")
+
+#a while loop to get input for circumference of a circle
+while True:
+    a = input("Do you want to know circumference?(Enter y/n)")
+    if a=="n":
+        break
+    elif a=="y":
+        b = input("Find circumference for same radius?(Enter y/n)")
+        if b=="n":
+            ra = int(input("Enter radius of circle : "))
+            #formula for calculating circumference of circle is 2*pi*radius
+            circumference=2*3.14*ra
+            print("Circumference is",circumference)
+            break
+        elif b=="y":
+            circumference=2*3.14*r
+            print("Circumference is",circumference)
+            break
+        else:
+            print("Enter either y/n")
+    else:
+        print("Enter either y/n")
