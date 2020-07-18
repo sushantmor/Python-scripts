@@ -1,0 +1,39 @@
+#no need to import any module as program
+#will run with the help of pre-build modules
+
+#define any variable(say = l & w) and get values from user (use input command)
+#input must be integer (use int command)
+l=int(input("Enter Length of rectangle : "))
+w=int(input("Enter Width of rectangle : "))
+
+
+#formula for calculating area of rectangle is Length*Width
+area=l*w
+
+
+print("Area of rectangle is:",area,"sq. unit")
+
+#while loop to get input regarding perimeter of rectangle
+while True:
+    a = input("Do you want to know perimeter?(Enter y/n)")
+    if a=="n":
+        break
+    elif a=="y":
+        b = input("Find perimeter for same dimensions?(Enter y/n)")
+        if b=="n":
+            le=int(input("Enter Length of rectangle : "))
+            wi=int(input("Enter Width of rectangle : "))
+            P = le+wi
+            #formula for calculating circumference of circle is 2*pi*radius
+            perimeter=2*P
+            print("Perimeter is ",perimeter)
+            break
+        elif b=="y":
+            p = l+w
+            perimeter=2*p
+            print("Perimeter is",perimeter)
+            break
+        else:
+            print("Enter either y/n")
+    else:
+        print("Enter either y/n")
