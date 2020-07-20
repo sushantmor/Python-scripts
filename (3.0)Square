@@ -1,0 +1,51 @@
+#no need to import any module as program
+#will run with the help of pre-build modules
+
+#define any variable(say = s) and get values from user (use input command)
+#input must be integer (use int command)
+s=int(input("Enter side of square: "))
+
+#formula for calculating area of square is side*side
+Area = s*s
+
+print("Area of square is:",Area,"sq. unit")
+
+#while loop to get input regarding perimeter of square
+while True:
+    a = input("Do you want to know perimeter?(Enter y/n)")
+    if a=="n":
+        break
+    elif a=="y":
+        b = input("Find perimeter for same side?(Enter y/n)")
+        if b=="n":
+            ss = int(input("Enter side of square: "))
+            #formula for calculating perimeter of square is 4*side
+            Perimeter = 4*ss
+            print("Perimeter is ",Perimeter)
+            break
+        elif b=="y":
+            perimeter = 4*s
+            print("Perimeter is",perimeter)
+            break
+        else:
+            print("Enter either y/n")
+while True:
+    z = input("Do you want to know diagonal?(Enter y/n)")
+    if z=="n":
+        break
+    elif z=="y":
+        q = input("Find diagonal for same side?(Enter y/n)")
+        if q=="y":
+            #formula for calculating diagonal of square is side*1.414(upto 3 decimals)
+            diagonal = s*1.414
+            print("Diagonal is ",diagonal)
+            break
+        elif q=="n":
+            qq = int(input("Enter side of square: "))
+            Diagonal = qq*1.414
+            print("Diagonal is ",Diagonal)
+            break
+        else:
+            print("Enter either y/n")
+    else:
+        print("Enter either y/n")
